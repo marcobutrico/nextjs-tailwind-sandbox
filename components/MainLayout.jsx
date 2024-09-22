@@ -8,7 +8,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { GrProjects } from "react-icons/gr";
 import { FaAngleRight, FaCheck, FaCheckDouble } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
-import { SiHelpscout } from "react-icons/si";
+import { SiHelpscout, SiSinglestore } from "react-icons/si";
 
 const MainLayout = ({ children }) => {
   const { open } = useContext(MenuContext);
@@ -38,11 +38,19 @@ const MainLayout = ({ children }) => {
               <FaAngleRight />
             </li>
 
-            {/* Menu para Singule */}
-            <li className="flex justify-start items-center hover:bg-blue-200 hover:text-blue-800 rounded-xl p-2 cursor-pointer">
-              <FaCheck className="mr-2" />
-              <h2 className="flex-1">Singule</h2>
-              <FaAngleRight />
+            {/* Menu para Singular */}
+            <li className="flex flex-col justify-start items-start hover:bg-blue-200 hover:text-blue-800 rounded-xl p-2 cursor-pointer">
+              <div className="w-full flex flex-row justify-start items-center">
+                <FaCheck className="mr-2" />
+                <h2 className="flex-1">Singular</h2>
+                <FaAngleRight />
+              </div>
+              <ul className="ml-8 mt-4">
+                <li className="w-full flex flex-row gap-4 justify-start items-center">
+                  <SiSinglestore className="mr-2" />
+                  <Link href="/singular/selectbox">Select Box</Link>
+                </li>
+              </ul>
             </li>
 
             {/* Menu para Complex */}
